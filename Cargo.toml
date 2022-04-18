@@ -1,0 +1,2 @@
+[workspace]
+members = ["location-history", "timeline-visualizer"]
