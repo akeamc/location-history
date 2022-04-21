@@ -79,7 +79,7 @@ fn main() -> anyhow::Result<()> {
         )), // North Atlantic
     ];
 
-    println!("reading {:?}", opt.input.canonicalize()?);
+    println!("reading {}", opt.input.display());
 
     let mut count = 0;
     let before = Instant::now();
@@ -98,7 +98,7 @@ fn main() -> anyhow::Result<()> {
         count as f32 / elapsed.as_secs_f32()
     );
 
-    eprintln!("saving images to {:?}", output_dir.canonicalize()?);
+    eprintln!("saving images to {}", output_dir.display());
 
     create_dir_all(output_dir)?;
 
